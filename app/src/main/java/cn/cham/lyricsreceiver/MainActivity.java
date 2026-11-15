@@ -302,9 +302,9 @@ public final class MainActivity extends AppCompatActivity {
             Uri uri = null;
             try {
                 ContentValues values = new ContentValues();
-                values.put(MediaStore.Images.Media.DISPLAY_NAME, "LeShi_" + new SimpleDateFormat("yyyyMMdd_HHmmss_SSS", Locale.ROOT).format(new Date()) + file.getName().substring(file.getName().lastIndexOf('.')));
+                values.put(MediaStore.Images.Media.DISPLAY_NAME, "Apple-Music-Share_" + new SimpleDateFormat("yyyyMMdd_HHmmss_SSS", Locale.ROOT).format(new Date()) + file.getName().substring(file.getName().lastIndexOf('.')));
                 values.put(MediaStore.Images.Media.MIME_TYPE, mime(file));
-                values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/LeShi");
+                values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/Apple-Music-Share");
                 values.put(MediaStore.Images.Media.IS_PENDING, 1);
                 uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
                 if (uri == null) throw new IOException("相册未返回保存位置");

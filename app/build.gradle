@@ -7,12 +7,12 @@ android {
         applicationId 'com.instagram.android'
         minSdk 29
         targetSdk 36
-        versionCode 5
-        versionName '0.3.2'
+        versionCode 6
+        versionName '0.3.3'
     }
     signingConfigs {
         localRelease {
-            storeFile rootProject.file('.signing/local-release.p12')
+            storeFile file(System.getenv('APPLE_MUSIC_SHARE_KEYSTORE') ?: rootProject.file('.signing/local-release.p12'))
             storePassword 'lyrics-local-build'
             keyAlias 'lyrics'
             keyPassword 'lyrics-local-build'
