@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="?attr/colorSurface">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:paddingHorizontal="24dp" android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+        <FrameLayout android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/preview" android:layout_width="match_parent"
+                android:layout_height="match_parent" android:visibility="gone"
+                android:contentDescription="图片预览" android:scaleType="fitCenter" />
+            <TextView android:id="@+id/empty_hint" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center"
+                android:gravity="center" android:text="从 Apple Music 分享图片到这里"
+                android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+        </FrameLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save" style="@style/LyricsActionButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="保存" android:enabled="false"
+            app:icon="@drawable/ic_save" app:iconGravity="textStart" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/share" style="@style/LyricsShareButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="分享" android:enabled="false"
+            app:icon="@drawable/ic_share" app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

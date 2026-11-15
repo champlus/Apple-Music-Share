@@ -1,0 +1,2 @@
+-keep class cn.cham.lyricsreceiver.MainActivity { *; }
+-keep class cn.cham.lyricsreceiver.ImageProvider { *; }

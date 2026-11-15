@@ -1,0 +1,38 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'cn.cham.lyricsreceiver'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.instagram.android'
+        minSdk 29
+        targetSdk 36
+        versionCode 5
+        versionName '0.3.2'
+    }
+    signingConfigs {
+        localRelease {
+            storeFile rootProject.file('.signing/local-release.p12')
+            storePassword 'lyrics-local-build'
+            keyAlias 'lyrics'
+            keyPassword 'lyrics-local-build'
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.localRelease
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug { signingConfig signingConfigs.localRelease }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.14.0'
+}
