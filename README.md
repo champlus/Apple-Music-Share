@@ -4,6 +4,10 @@
 
 [下载 APK](https://github.com/champlus/Apple-Music-Share/releases/latest) · Android 10+
 
+<p align="center">
+  <img src="docs/images/preview.png" width="480" alt="乐拾歌词分享效果" />
+</p>
+
 ## 使用
 
 1. 安装乐拾。
